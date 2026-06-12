@@ -1,0 +1,1157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Crystalink Technologies — IT Services & Network Cabling Maryland</title>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet"/>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --white: #FFFFFF;
+      --off: #F5F4F0;
+      --black: #0E0E0E;
+      --ink: #1A1A1A;
+      --yellow: #FFD000;
+      --yellow-dark: #E6BC00;
+      --gray: #6B6B6B;
+      --light-gray: #E8E8E4;
+      --border: #E0DFD9;
+      --card: #FAFAF7;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--white);
+      color: var(--ink);
+      font-family: 'DM Sans', sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── NAV ── */
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 48px;
+      height: 68px;
+      background: var(--black);
+      position: sticky;
+      top: 0;
+      z-index: 200;
+    }
+    .logo {
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      font-size: 20px;
+      color: var(--white);
+      letter-spacing: -0.5px;
+      text-decoration: none;
+    }
+    .logo span { color: var(--yellow); }
+    .nav-links {
+      display: flex;
+      gap: 32px;
+      list-style: none;
+    }
+    .nav-links a {
+      color: #AAA;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--white); }
+    .nav-cta {
+      background: var(--yellow);
+      color: var(--black) !important;
+      font-weight: 600 !important;
+      padding: 9px 20px;
+      border-radius: 6px;
+      font-size: 14px !important;
+      transition: background 0.2s !important;
+    }
+    .nav-cta:hover { background: var(--yellow-dark) !important; color: var(--black) !important; }
+    .nav-burger { display: none; cursor: pointer; flex-direction: column; gap: 5px; }
+    .nav-burger span { width: 24px; height: 2px; background: var(--white); border-radius: 2px; display: block; }
+
+    /* ── HERO ── */
+    .hero {
+      background: var(--black);
+      padding: 100px 48px 0;
+      overflow: hidden;
+      position: relative;
+    }
+    .hero-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 420px;
+      gap: 60px;
+      align-items: end;
+    }
+    .hero-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #1E1E1E;
+      border: 1px solid #333;
+      color: var(--yellow);
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      padding: 7px 14px;
+      border-radius: 100px;
+      margin-bottom: 28px;
+    }
+    .hero-tag::before { content: "●"; font-size: 8px; animation: pulse 2s infinite; }
+    @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.3} }
+    .hero h1 {
+      font-family: 'Syne', sans-serif;
+      font-size: clamp(48px, 7vw, 88px);
+      font-weight: 800;
+      line-height: 1.0;
+      letter-spacing: -3px;
+      color: var(--white);
+      margin-bottom: 28px;
+    }
+    .hero h1 .accent { color: var(--yellow); }
+    .hero-sub {
+      font-size: 18px;
+      color: #888;
+      max-width: 480px;
+      line-height: 1.7;
+      margin-bottom: 40px;
+    }
+    .hero-btns { display: flex; gap: 14px; flex-wrap: wrap; }
+    .btn-yellow {
+      background: var(--yellow);
+      color: var(--black);
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 600;
+      font-size: 15px;
+      padding: 14px 28px;
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+      transition: background 0.2s, transform 0.15s;
+    }
+    .btn-yellow:hover { background: var(--yellow-dark); transform: translateY(-1px); }
+    .btn-outline-white {
+      background: transparent;
+      color: var(--white);
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 600;
+      font-size: 15px;
+      padding: 14px 28px;
+      border-radius: 8px;
+      border: 1px solid #333;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+      transition: border-color 0.2s;
+    }
+    .btn-outline-white:hover { border-color: #666; }
+    .hero-visual {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      padding-bottom: 0;
+    }
+    .hero-stat-card {
+      background: #1A1A1A;
+      border: 1px solid #2A2A2A;
+      border-radius: 14px;
+      padding: 22px 26px;
+    }
+    .hero-stat-card .big {
+      font-family: 'Syne', sans-serif;
+      font-size: 42px;
+      font-weight: 800;
+      color: var(--yellow);
+      letter-spacing: -2px;
+      line-height: 1;
+    }
+    .hero-stat-card .label {
+      font-size: 13px;
+      color: #666;
+      margin-top: 4px;
+    }
+    .hero-stat-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+    .hero-bar {
+      background: var(--yellow);
+      height: 4px;
+      width: 100%;
+      margin-top: 60px;
+    }
+
+    /* ── TICKER ── */
+    .ticker-wrap {
+      background: var(--yellow);
+      overflow: hidden;
+      white-space: nowrap;
+      padding: 12px 0;
+    }
+    .ticker-inner {
+      display: inline-block;
+      animation: ticker 22s linear infinite;
+    }
+    .ticker-inner span {
+      font-family: 'Syne', sans-serif;
+      font-weight: 700;
+      font-size: 13px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--black);
+      padding: 0 40px;
+    }
+    .ticker-inner span::after { content: "✦"; margin-left: 40px; }
+    @keyframes ticker { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+    /* ── SECTION BASE ── */
+    .section {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 90px 48px;
+    }
+    .eyebrow {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: var(--gray);
+      margin-bottom: 14px;
+    }
+    .section-title {
+      font-family: 'Syne', sans-serif;
+      font-size: clamp(30px, 4vw, 46px);
+      font-weight: 800;
+      letter-spacing: -1.5px;
+      line-height: 1.1;
+      margin-bottom: 48px;
+      color: var(--ink);
+    }
+    .section-title .yel { color: var(--yellow-dark); }
+
+    /* ── SERVICES ── */
+    #services { background: var(--off); }
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+    }
+    .service-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 32px;
+      transition: box-shadow 0.2s, transform 0.2s;
+    }
+    .service-card:hover { box-shadow: 0 8px 32px rgba(0,0,0,0.08); transform: translateY(-3px); }
+    .service-icon {
+      width: 48px;
+      height: 48px;
+      background: var(--yellow);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      margin-bottom: 18px;
+    }
+    .service-card h3 {
+      font-family: 'Syne', sans-serif;
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 10px;
+      letter-spacing: -0.3px;
+    }
+    .service-card p { font-size: 14px; color: var(--gray); line-height: 1.6; }
+    .service-link {
+      display: inline-block;
+      margin-top: 16px;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--ink);
+      text-decoration: none;
+      border-bottom: 2px solid var(--yellow);
+      padding-bottom: 1px;
+    }
+
+    /* ── REMOTE IT PLANS ── */
+    #remote { background: var(--black); }
+    #remote .section-title { color: var(--white); }
+    #remote .eyebrow { color: var(--yellow); }
+    .plans-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+      gap: 20px;
+    }
+    .plan-card {
+      background: #161616;
+      border: 1px solid #2A2A2A;
+      border-radius: 16px;
+      padding: 32px;
+      transition: border-color 0.2s;
+    }
+    .plan-card:hover { border-color: #444; }
+    .plan-card.featured {
+      background: var(--yellow);
+      border-color: var(--yellow);
+    }
+    .plan-name {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #666;
+      margin-bottom: 10px;
+    }
+    .plan-card.featured .plan-name { color: rgba(0,0,0,0.5); }
+    .plan-price {
+      font-family: 'Syne', sans-serif;
+      font-size: 52px;
+      font-weight: 800;
+      letter-spacing: -3px;
+      color: var(--white);
+      line-height: 1;
+      margin-bottom: 4px;
+    }
+    .plan-card.featured .plan-price { color: var(--black); }
+    .plan-price sup { font-size: 22px; vertical-align: super; letter-spacing: 0; }
+    .plan-billing { font-size: 13px; color: #555; margin-bottom: 24px; }
+    .plan-card.featured .plan-billing { color: rgba(0,0,0,0.5); }
+    .plan-divider { border: none; border-top: 1px solid #2A2A2A; margin-bottom: 24px; }
+    .plan-card.featured .plan-divider { border-color: rgba(0,0,0,0.15); }
+    .plan-features { list-style: none; margin-bottom: 28px; }
+    .plan-features li {
+      font-size: 14px;
+      color: #CCC;
+      padding: 7px 0;
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+    }
+    .plan-card.featured .plan-features li { color: var(--black); }
+    .plan-features li::before { content: "✓"; color: var(--yellow); font-weight: 700; flex-shrink: 0; }
+    .plan-card.featured .plan-features li::before { color: var(--black); }
+    .plan-features li.off { color: #444; }
+    .plan-card.featured .plan-features li.off { color: rgba(0,0,0,0.35); }
+    .plan-features li.off::before { content: "—"; color: #333; }
+    .plan-card.featured .plan-features li.off::before { color: rgba(0,0,0,0.3); }
+    .btn-plan-dark {
+      display: block;
+      text-align: center;
+      background: transparent;
+      color: var(--white);
+      border: 1px solid #333;
+      font-weight: 600;
+      font-size: 14px;
+      padding: 13px;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: border-color 0.2s;
+    }
+    .btn-plan-dark:hover { border-color: #666; }
+    .btn-plan-black {
+      display: block;
+      text-align: center;
+      background: var(--black);
+      color: var(--white);
+      font-weight: 600;
+      font-size: 14px;
+      padding: 13px;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+    .btn-plan-black:hover { background: #1A1A1A; }
+
+    /* ── PRODUCTS ── */
+    #products { background: var(--white); }
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+    }
+    .product-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      overflow: hidden;
+      transition: box-shadow 0.2s, transform 0.2s;
+    }
+    .product-card:hover { box-shadow: 0 8px 28px rgba(0,0,0,0.07); transform: translateY(-2px); }
+    .product-thumb {
+      background: var(--black);
+      height: 140px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 48px;
+    }
+    .product-body { padding: 22px; }
+    .product-tag {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--gray);
+      margin-bottom: 8px;
+    }
+    .product-body h3 {
+      font-family: 'Syne', sans-serif;
+      font-size: 16px;
+      font-weight: 700;
+      margin-bottom: 8px;
+      letter-spacing: -0.2px;
+    }
+    .product-body p { font-size: 13px; color: var(--gray); margin-bottom: 16px; line-height: 1.5; }
+    .product-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .product-price {
+      font-family: 'Syne', sans-serif;
+      font-size: 22px;
+      font-weight: 800;
+      letter-spacing: -1px;
+    }
+    .btn-buy {
+      background: var(--yellow);
+      color: var(--black);
+      font-weight: 600;
+      font-size: 13px;
+      padding: 9px 18px;
+      border-radius: 6px;
+      border: none;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+      transition: background 0.2s;
+    }
+    .btn-buy:hover { background: var(--yellow-dark); }
+
+    /* ── GUIDES ── */
+    #guides { background: var(--off); }
+    .guides-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+    }
+    .guide-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 28px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      transition: box-shadow 0.2s;
+    }
+    .guide-card:hover { box-shadow: 0 6px 24px rgba(0,0,0,0.07); }
+    .guide-cat {
+      display: inline-block;
+      background: var(--yellow);
+      color: var(--black);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      border-radius: 4px;
+      align-self: flex-start;
+    }
+    .guide-card h3 {
+      font-family: 'Syne', sans-serif;
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: -0.3px;
+      line-height: 1.3;
+    }
+    .guide-card p { font-size: 14px; color: var(--gray); line-height: 1.6; flex: 1; }
+    .guide-meta {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 4px;
+    }
+    .guide-price {
+      font-family: 'Syne', sans-serif;
+      font-size: 20px;
+      font-weight: 800;
+    }
+    .guide-price.free { color: #27AE60; }
+    .guide-read {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--ink);
+      text-decoration: none;
+      border-bottom: 2px solid var(--yellow);
+      padding-bottom: 1px;
+    }
+
+    /* ── ABOUT ── */
+    #about {
+      background: var(--black);
+    }
+    .about-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+    #about .section-title { color: var(--white); margin-bottom: 20px; }
+    #about .eyebrow { color: var(--yellow); }
+    .about-body { font-size: 16px; color: #888; line-height: 1.8; margin-bottom: 32px; }
+    .about-stats {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+    .astat {
+      background: #161616;
+      border: 1px solid #2A2A2A;
+      border-radius: 12px;
+      padding: 20px 22px;
+    }
+    .astat .num {
+      font-family: 'Syne', sans-serif;
+      font-size: 32px;
+      font-weight: 800;
+      color: var(--yellow);
+      letter-spacing: -1.5px;
+    }
+    .astat .lbl { font-size: 13px; color: #555; margin-top: 4px; }
+    .about-img-block {
+      background: #161616;
+      border: 1px solid #2A2A2A;
+      border-radius: 20px;
+      padding: 40px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .about-skill {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    .skill-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 10px;
+      background: #222;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      flex-shrink: 0;
+    }
+    .skill-info h4 {
+      font-family: 'Syne', sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 4px;
+    }
+    .skill-bar-wrap {
+      height: 4px;
+      background: #2A2A2A;
+      border-radius: 2px;
+      overflow: hidden;
+      width: 200px;
+    }
+    .skill-bar {
+      height: 100%;
+      background: var(--yellow);
+      border-radius: 2px;
+    }
+
+    /* ── PORTFOLIO ── */
+    #portfolio { background: var(--white); }
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+    }
+    .portfolio-card {
+      background: var(--black);
+      border-radius: 16px;
+      overflow: hidden;
+      position: relative;
+    }
+    .portfolio-thumb {
+      height: 180px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 56px;
+      background: #111;
+    }
+    .portfolio-body { padding: 24px; }
+    .portfolio-tag {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--yellow);
+      margin-bottom: 8px;
+    }
+    .portfolio-body h3 {
+      font-family: 'Syne', sans-serif;
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 8px;
+      letter-spacing: -0.3px;
+    }
+    .portfolio-body p { font-size: 13px; color: #666; line-height: 1.5; }
+
+    /* ── CONTACT ── */
+    #contact { background: var(--yellow); }
+    .contact-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: start;
+    }
+    #contact .section-title { color: var(--black); margin-bottom: 16px; }
+    #contact .eyebrow { color: rgba(0,0,0,0.5); }
+    .contact-sub { font-size: 16px; color: rgba(0,0,0,0.6); margin-bottom: 32px; line-height: 1.7; }
+    .contact-details { display: flex; flex-direction: column; gap: 16px; }
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      font-size: 15px;
+      font-weight: 500;
+      color: var(--black);
+      text-decoration: none;
+    }
+    .contact-item-icon {
+      width: 42px;
+      height: 42px;
+      background: rgba(0,0,0,0.1);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      flex-shrink: 0;
+    }
+    .contact-form {
+      background: var(--white);
+      border-radius: 20px;
+      padding: 36px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    .form-group { display: flex; flex-direction: column; gap: 6px; }
+    .form-group label { font-size: 13px; font-weight: 600; color: var(--ink); }
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      background: var(--off);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 12px 14px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 14px;
+      color: var(--ink);
+      outline: none;
+      transition: border-color 0.2s;
+      resize: none;
+    }
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus { border-color: var(--black); }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--black);
+      padding: 40px 48px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+    footer p { font-size: 13px; color: #555; }
+    .footer-links { display: flex; gap: 24px; }
+    .footer-links a { font-size: 13px; color: #555; text-decoration: none; transition: color 0.2s; }
+    .footer-links a:hover { color: var(--white); }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 768px) {
+      nav { padding: 0 20px; }
+      .nav-links { display: none; }
+      .nav-burger { display: flex; }
+      .hero { padding: 60px 20px 0; }
+      .hero-inner { grid-template-columns: 1fr; gap: 40px; }
+      .hero-visual { display: none; }
+      .section { padding: 60px 20px; }
+      .about-inner { grid-template-columns: 1fr; gap: 40px; }
+      .contact-inner { grid-template-columns: 1fr; gap: 40px; }
+      .form-row { grid-template-columns: 1fr; }
+      footer { flex-direction: column; text-align: center; padding: 32px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="logo">Crystal<span>link</span></a>
+  <ul class="nav-links">
+    <li><a href="#services">Services</a></li>
+    <li><a href="#remote">Remote IT</a></li>
+    <li><a href="#products">Products</a></li>
+    <li><a href="#guides">Guides</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#contact" class="nav-cta">Get a Quote</a></li>
+  </ul>
+  <div class="nav-burger">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div>
+      <div class="hero-tag">Maryland's IT & Cabling Specialists</div>
+      <h1>We wire.<br/>We fix.<br/><span class="accent">We deliver.</span></h1>
+      <p class="hero-sub">Network cabling, IT support, camera systems, and remote tech help for small businesses across Maryland. Licensed. Fast. Local.</p>
+      <div class="hero-btns">
+        <a href="#contact" class="btn-yellow">Get a Free Quote</a>
+        <a href="#services" class="btn-outline-white">View Services</a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-stat-card">
+        <div class="big">50+</div>
+        <div class="label">Business clients served across Maryland</div>
+      </div>
+      <div class="hero-stat-row">
+        <div class="hero-stat-card">
+          <div class="big">5+</div>
+          <div class="label">Years in IT services</div>
+        </div>
+        <div class="hero-stat-card">
+          <div class="big">2hr</div>
+          <div class="label">Avg. remote response</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="hero-bar"></div>
+</section>
+
+<!-- TICKER -->
+<div class="ticker-wrap">
+  <div class="ticker-inner">
+    <span>Network Cabling</span>
+    <span>Remote IT Support</span>
+    <span>Camera Systems</span>
+    <span>Wifi Setup</span>
+    <span>Server Config</span>
+    <span>Structured Cabling</span>
+    <span>PC Repair</span>
+    <span>Small Business IT</span>
+    <span>Network Cabling</span>
+    <span>Remote IT Support</span>
+    <span>Camera Systems</span>
+    <span>Wifi Setup</span>
+    <span>Server Config</span>
+    <span>Structured Cabling</span>
+    <span>PC Repair</span>
+    <span>Small Business IT</span>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="section">
+    <div class="eyebrow">What We Do</div>
+    <div class="section-title">Services built for <span class="yel">real businesses.</span></div>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-icon">🔌</div>
+        <h3>Network Cabling</h3>
+        <p>Cat5e, Cat6, and fiber runs for offices, retail, clinics, and warehouses. Clean installs, labeled and tested.</p>
+        <a href="#contact" class="service-link">Get a quote →</a>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">📡</div>
+        <h3>Wi-Fi & Network Setup</h3>
+        <p>Full wireless coverage planning, router config, and network segmentation. No dead zones.</p>
+        <a href="#contact" class="service-link">Get a quote →</a>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">📷</div>
+        <h3>Camera Systems</h3>
+        <p>IP camera installation, NVR setup, and remote viewing configuration for retail and office environments.</p>
+        <a href="#contact" class="service-link">Get a quote →</a>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🖥️</div>
+        <h3>Remote IT Support</h3>
+        <p>Fast remote help for PC issues, network problems, software bugs, and anything in between.</p>
+        <a href="#remote" class="service-link">See plans →</a>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🔧</div>
+        <h3>PC & Device Repair</h3>
+        <p>Hardware diagnostics, OS fixes, data recovery, and device setup for businesses and individuals.</p>
+        <a href="#contact" class="service-link">Get a quote →</a>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🏢</div>
+        <h3>On-Site IT Consulting</h3>
+        <p>We come to you. Network audits, infrastructure planning, and hands-on setup for your space.</p>
+        <a href="#contact" class="service-link">Get a quote →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REMOTE IT PLANS -->
+<section id="remote">
+  <div class="section">
+    <div class="eyebrow">Remote IT Support</div>
+    <div class="section-title">Fix your tech.<br/>No site visit needed.</div>
+    <div class="plans-grid">
+      <div class="plan-card">
+        <div class="plan-name">One-Time</div>
+        <div class="plan-price"><sup>$</sup>75</div>
+        <div class="plan-billing">per session · 1 hour</div>
+        <hr class="plan-divider"/>
+        <ul class="plan-features">
+          <li>1-hour remote session</li>
+          <li>Troubleshooting & diagnostics</li>
+          <li>Software & settings fixes</li>
+          <li>Email follow-up summary</li>
+          <li class="off">Priority scheduling</li>
+          <li class="off">Monthly check-ins</li>
+        </ul>
+        <a href="mailto:support@crystalinktech.com?subject=One-Time Session" class="btn-plan-dark">Book Session</a>
+      </div>
+      <div class="plan-card featured">
+        <div class="plan-name">Monthly Plan</div>
+        <div class="plan-price"><sup>$</sup>99</div>
+        <div class="plan-billing">per month · cancel anytime</div>
+        <hr class="plan-divider"/>
+        <ul class="plan-features">
+          <li>2 remote sessions/month</li>
+          <li>Same-day priority response</li>
+          <li>Troubleshooting & diagnostics</li>
+          <li>Email support between sessions</li>
+          <li>Monthly network check-in</li>
+          <li class="off">Unlimited sessions</li>
+        </ul>
+        <a href="mailto:support@crystalinktech.com?subject=Monthly Plan" class="btn-plan-black">Get Started</a>
+      </div>
+      <div class="plan-card">
+        <div class="plan-name">Business Pro</div>
+        <div class="plan-price"><sup>$</sup>199</div>
+        <div class="plan-billing">per month · cancel anytime</div>
+        <hr class="plan-divider"/>
+        <ul class="plan-features">
+          <li>Unlimited remote sessions</li>
+          <li>2-hour response SLA</li>
+          <li>Full network management</li>
+          <li>Security & update monitoring</li>
+          <li>Monthly network check-in</li>
+          <li>Discounted on-site visits</li>
+        </ul>
+        <a href="mailto:support@crystalinktech.com?subject=Business Pro" class="btn-plan-dark">Contact Us</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUCTS -->
+<section id="products">
+  <div class="section">
+    <div class="eyebrow">Products</div>
+    <div class="section-title">Pro-grade gear, <span class="yel">contractor-sourced.</span></div>
+    <div class="products-grid">
+      <div class="product-card">
+        <div class="product-thumb">🔌</div>
+        <div class="product-body">
+          <div class="product-tag">Cabling Kit</div>
+          <h3>Small Office Starter Kit</h3>
+          <p>Cat6 patch cables, keystone jacks, wall plates, and a patch panel — everything for a 10-port office run.</p>
+          <div class="product-footer">
+            <span class="product-price">$89</span>
+            <a href="mailto:support@crystalinktech.com?subject=Small Office Kit Order" class="btn-buy">Order Now</a>
+          </div>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="product-thumb">📡</div>
+        <div class="product-body">
+          <div class="product-tag">Wi-Fi Bundle</div>
+          <h3>Business Wi-Fi Bundle</h3>
+          <p>Dual-band access point, PoE switch, and pre-configured setup. Just plug in and you're live.</p>
+          <div class="product-footer">
+            <span class="product-price">$149</span>
+            <a href="mailto:support@crystalinktech.com?subject=WiFi Bundle Order" class="btn-buy">Order Now</a>
+          </div>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="product-thumb">💾</div>
+        <div class="product-body">
+          <div class="product-tag">Network Audit</div>
+          <h3>Network Audit Report</h3>
+          <p>We remotely assess your current setup and deliver a full report with recommendations and priority fixes.</p>
+          <div class="product-footer">
+            <span class="product-price">$49</span>
+            <a href="mailto:support@crystalinktech.com?subject=Network Audit" class="btn-buy">Book Now</a>
+          </div>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="product-thumb">🔒</div>
+        <div class="product-body">
+          <div class="product-tag">Security</div>
+          <h3>Security Starter Pack</h3>
+          <p>2-camera IP system with NVR, hard drive, and remote viewing setup. Installed and tested.</p>
+          <div class="product-footer">
+            <span class="product-price">$299</span>
+            <a href="mailto:support@crystalinktech.com?subject=Security Pack" class="btn-buy">Get a Quote</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GUIDES -->
+<section id="guides">
+  <div class="section">
+    <div class="eyebrow">Free & Paid Guides</div>
+    <div class="section-title">Learn from the <span class="yel">field.</span></div>
+    <div class="guides-grid">
+      <div class="guide-card">
+        <span class="guide-cat">Free</span>
+        <h3>5 Signs Your Business Network Needs an Upgrade</h3>
+        <p>Slow speeds, dropped connections, and outdated gear — here's how to know when it's time to call a pro.</p>
+        <div class="guide-meta">
+          <span class="guide-price free">Free</span>
+          <a href="mailto:support@crystalinktech.com?subject=Free Guide Request" class="guide-read">Download →</a>
+        </div>
+      </div>
+      <div class="guide-card">
+        <span class="guide-cat">Guide</span>
+        <h3>How to Set Up Your Small Business Network</h3>
+        <p>Step-by-step cabling, switch setup, and Wi-Fi planning. Written for business owners, not engineers.</p>
+        <div class="guide-meta">
+          <span class="guide-price">$29</span>
+          <a href="mailto:support@crystalinktech.com?subject=Network Setup Guide" class="guide-read">Buy Guide →</a>
+        </div>
+      </div>
+      <div class="guide-card">
+        <span class="guide-cat">Template</span>
+        <h3>IT Audit Checklist for Small Businesses</h3>
+        <p>A fillable PDF checklist to assess your current IT setup. Used by IT contractors and office managers.</p>
+        <div class="guide-meta">
+          <span class="guide-price">$19</span>
+          <a href="mailto:support@crystalinktech.com?subject=IT Audit Checklist" class="guide-read">Buy Now →</a>
+        </div>
+      </div>
+      <div class="guide-card">
+        <span class="guide-cat">Guide</span>
+        <h3>DIY Office Cabling: What You Can & Can't Do Yourself</h3>
+        <p>An honest breakdown of when to DIY and when to bring in a contractor. With material cost estimates.</p>
+        <div class="guide-meta">
+          <span class="guide-price">$19</span>
+          <a href="mailto:support@crystalinktech.com?subject=DIY Cabling Guide" class="guide-read">Buy Guide →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="section">
+    <div class="about-inner">
+      <div>
+        <div class="eyebrow">About Crystalink</div>
+        <div class="section-title">Local. Licensed.<br/>No fluff.</div>
+        <p class="about-body">Crystalink Technologies is a Maryland-based IT services and network cabling company. We do the hands-on work that keeps small businesses running — structured cabling, camera installs, Wi-Fi systems, and remote IT support. No big-company runaround. Just real people who know the work.</p>
+        <a href="#contact" class="btn-yellow">Work With Us</a>
+        <div class="about-stats" style="margin-top:36px;">
+          <div class="astat"><div class="num">50+</div><div class="lbl">Clients served</div></div>
+          <div class="astat"><div class="num">5+</div><div class="lbl">Years experience</div></div>
+          <div class="astat"><div class="num">MD</div><div class="lbl">Based in Maryland</div></div>
+          <div class="astat"><div class="num">100%</div><div class="lbl">Job completion rate</div></div>
+        </div>
+      </div>
+      <div class="about-img-block">
+        <div class="about-skill">
+          <div class="skill-icon">🔌</div>
+          <div class="skill-info">
+            <h4>Structured Cabling</h4>
+            <div class="skill-bar-wrap"><div class="skill-bar" style="width:95%"></div></div>
+          </div>
+        </div>
+        <div class="about-skill">
+          <div class="skill-icon">📡</div>
+          <div class="skill-info">
+            <h4>Network & Wi-Fi</h4>
+            <div class="skill-bar-wrap"><div class="skill-bar" style="width:90%"></div></div>
+          </div>
+        </div>
+        <div class="about-skill">
+          <div class="skill-icon">💻</div>
+          <div class="skill-info">
+            <h4>Remote IT Support</h4>
+            <div class="skill-bar-wrap"><div class="skill-bar" style="width:85%"></div></div>
+          </div>
+        </div>
+        <div class="about-skill">
+          <div class="skill-icon">📷</div>
+          <div class="skill-info">
+            <h4>Camera Systems</h4>
+            <div class="skill-bar-wrap"><div class="skill-bar" style="width:80%"></div></div>
+          </div>
+        </div>
+        <div class="about-skill">
+          <div class="skill-icon">🔧</div>
+          <div class="skill-info">
+            <h4>PC & Device Repair</h4>
+            <div class="skill-bar-wrap"><div class="skill-bar" style="width:88%"></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PORTFOLIO -->
+<section id="portfolio">
+  <div class="section">
+    <div class="eyebrow">Past Work</div>
+    <div class="section-title">Jobs we've <span class="yel">delivered.</span></div>
+    <div class="portfolio-grid">
+      <div class="portfolio-card">
+        <div class="portfolio-thumb">🏪</div>
+        <div class="portfolio-body">
+          <div class="portfolio-tag">Retail · Mt. Airy, MD</div>
+          <h3>Walmart Customer Experience Speaker System</h3>
+          <p>Full speaker system installation across a large retail floor. Three-phase project with structured audio cabling.</p>
+        </div>
+      </div>
+      <div class="portfolio-card">
+        <div class="portfolio-thumb">🚗</div>
+        <div class="portfolio-body">
+          <div class="portfolio-tag">Corporate · Maryland</div>
+          <h3>Avis Fleet Office Network Cabling</h3>
+          <p>Structured Cat6 cabling installation for a fleet management office. Clean runs, tested and labeled.</p>
+        </div>
+      </div>
+      <div class="portfolio-card">
+        <div class="portfolio-thumb">🏥</div>
+        <div class="portfolio-body">
+          <div class="portfolio-tag">Medical · Clinical Site</div>
+          <h3>Optos Medical PC Swap & Server Migration</h3>
+          <p>Server NIC configuration, network switch setup, and full data transfer between old and new clinical servers.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="section">
+    <div class="contact-inner">
+      <div>
+        <div class="eyebrow">Contact Us</div>
+        <div class="section-title">Let's get your project started.</div>
+        <p class="contact-sub">Send us a message and we'll get back to you within a few hours. Free quotes on all jobs.</p>
+        <div class="contact-details">
+          <a href="mailto:support@crystalinktech.com" class="contact-item">
+            <div class="contact-item-icon">✉️</div>
+            support@crystalinktech.com
+          </a>
+          <a href="tel:+12405550000" class="contact-item">
+            <div class="contact-item-icon">📞</div>
+            (240) 555-0000
+          </a>
+          <span class="contact-item">
+            <div class="contact-item-icon">📍</div>
+            Maryland, USA
+          </span>
+        </div>
+      </div>
+      <div class="contact-form">
+        <div class="form-row">
+          <div class="form-group">
+            <label>First Name</label>
+            <input type="text" placeholder="John"/>
+          </div>
+          <div class="form-group">
+            <label>Last Name</label>
+            <input type="text" placeholder="Smith"/>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Email</label>
+          <input type="email" placeholder="john@company.com"/>
+        </div>
+        <div class="form-group">
+          <label>Service Needed</label>
+          <select>
+            <option>Network Cabling</option>
+            <option>Wi-Fi Setup</option>
+            <option>Camera System</option>
+            <option>Remote IT Support</option>
+            <option>PC Repair</option>
+            <option>On-Site Consulting</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Message</label>
+          <textarea rows="4" placeholder="Tell us about your project..."></textarea>
+        </div>
+        <a href="mailto:support@crystalinktech.com" class="btn-yellow" style="text-align:center;">Send Message</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <a href="#" class="logo" style="font-family:'Syne',sans-serif;font-weight:800;font-size:18px;color:#fff;text-decoration:none;">Crystal<span style="color:#FFD000">link</span></a>
+  <p>© 2026 Crystalink Technologies · Maryland</p>
+  <div class="footer-links">
+    <a href="#services">Services</a>
+    <a href="#remote">Remote IT</a>
+    <a href="#products">Products</a>
+    <a href="#guides">Guides</a>
+    <a href="#contact">Contact</a>
+  </div>
+</footer>
+
+</body>
+</html>
