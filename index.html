@@ -948,24 +948,26 @@
           </span>
         </div>
       </div>
-      <div class="contact-form">
+      <form class="contact-form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thank-you.html">
+        <input type="hidden" name="form-name" value="contact"/>
+        <p style="display:none;"><label>Don't fill this out: <input name="bot-field"/></label></p>
         <div class="form-row">
           <div class="form-group">
             <label>First Name</label>
-            <input type="text" placeholder="John"/>
+            <input type="text" name="first_name" placeholder="John" required/>
           </div>
           <div class="form-group">
             <label>Last Name</label>
-            <input type="text" placeholder="Smith"/>
+            <input type="text" name="last_name" placeholder="Smith" required/>
           </div>
         </div>
         <div class="form-group">
           <label>Email</label>
-          <input type="email" placeholder="john@company.com"/>
+          <input type="email" name="email" placeholder="john@company.com" required/>
         </div>
         <div class="form-group">
           <label>Service Needed</label>
-          <select>
+          <select name="service_needed">
             <option>Network Cabling</option>
             <option>Wi-Fi Setup</option>
             <option>Camera System</option>
@@ -977,10 +979,10 @@
         </div>
         <div class="form-group">
           <label>Message</label>
-          <textarea rows="4" placeholder="Tell us about your project..."></textarea>
+          <textarea rows="4" name="message" placeholder="Tell us about your project..."></textarea>
         </div>
-        <a href="mailto:crystalinktechnologies@gmail.com" class="btn-yellow" style="text-align:center;">Send Message</a>
-      </div>
+        <button type="submit" class="btn-yellow" style="text-align:center;border:none;cursor:pointer;">Send Message</button>
+      </form>
     </div>
   </div>
 </section>
